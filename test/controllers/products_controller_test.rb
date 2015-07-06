@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ProductsControllerTest < ActionController::TestCase
   setup do
-    @product = products(:one)
+    @product = products(:two)
       @update = {
         title: 'Loren Ipsum',
         description: 'Wibbles are fun!',
@@ -15,6 +15,10 @@ class ProductsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     assert_not_nil assigns(:products)
+    #assert_select, но что значит фраза "для ведения перечня товаров, я так и не вкурила"
+    assert_select "ul" do
+     assert_select "li", 4
+    end
   end
 
   test "should get new" do
@@ -52,4 +56,5 @@ class ProductsControllerTest < ActionController::TestCase
 
     assert_redirected_to products_path
   end
+
 end
