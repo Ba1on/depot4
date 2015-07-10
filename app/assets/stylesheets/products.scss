@@ -40,11 +40,11 @@
 		padding-left: 1em;
 	}
 
-	.list_line_even{
+	.cycle_color:nth-child(odd){
 		background: #e0f8f8;
 	}
 
-	.list_line_odd{
+	.cycle_color:nth-child(even){
 		background: #f8b0f8;
 	}
 }
