@@ -46,3 +46,7 @@ end
 
 gem 'will_paginate', '~> 3.0'
 gem 'slim-rails'
+
+group :production do
+	gem 'mysql2'
+end
