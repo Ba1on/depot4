@@ -23,6 +23,11 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.xml { render xml: @product.to_xml }
+      format.yaml { render text: @product.to_yaml }
+    end
   end
 
   # GET /products/new

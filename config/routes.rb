@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+Depot4::Application.routes.draw do
 
   get 'admin' => 'admin#index'
 
